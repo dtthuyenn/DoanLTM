@@ -1,0 +1,515 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Poppins là font hiện đại, rõ ràng */
+    line-height: 1.7;
+    /* Tăng line-height cho dễ đọc */
+    margin: 0;
+    padding: 0;
+    /* Gradient nền toàn trang, tươi sáng và mượt mà */
+    background: linear-gradient(135deg, #e0f2f7 0%, #c8e6f0 100%);
+    color: #34495e;
+    /* Màu chữ chính, không quá tối để hài hòa với nền sáng */
+    scroll-behavior: smooth;
+    /* Cuộn mượt khi click vào link neo */
+    overflow-x: hidden;
+    /* Ngăn chặn cuộn ngang */
+}
+
+.container {
+    max-width: 1000px;
+    /* Tăng chiều rộng tối đa một chút */
+    margin: 40px auto;
+    /* Tăng margin trên dưới */
+    padding: 0 25px;
+    /* Tăng padding hai bên */
+}
+
+/* Header/Hero Section */
+.hero {
+    /* Gradient màu xanh lá - xanh dương tươi mới cho header */
+    background: linear-gradient(45deg, #1abc9c 0%, #3498db 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px 80px;
+    /* Tăng padding trên dưới */
+    position: relative;
+    overflow: hidden;
+    /* Đổ bóng mạnh mẽ, tạo cảm giác nổi bật */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 20px;
+    /* Bo góc dưới trái */
+    border-bottom-right-radius: 20px;
+    /* Bo góc dưới phải */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeInDown 1.2s ease-out;
+    /* Hiệu ứng hiện dần từ trên xuống, thời gian lâu hơn */
+}
+
+.avatar {
+    width: 200px;
+    /* Tăng kích thước avatar */
+    height: 200px;
+    border-radius: 50%;
+    /* Viền avatar màu vàng cam nổi bật và dày hơn */
+    border: 8px solid #f39c12;
+    margin-bottom: 30px;
+    object-fit: cover;
+    /* Đổ bóng avatar rõ ràng hơn */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    /* Hiệu ứng hover mượt mà */
+}
+
+.avatar:hover {
+    transform: scale(1.1) rotate(7deg);
+    /* Phóng to và xoay nhiều hơn khi hover */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    margin: 15px 0 10px;
+    font-size: 4.2em;
+    /* Tăng kích thước font đáng kể */
+    font-weight: 900;
+    /* Rất đậm */
+    /* Đổ bóng chữ mạnh, rõ nét */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+    /* Tăng khoảng cách chữ */
+    text-transform: uppercase;
+    /* Chữ hoa */
+}
+
+.tagline {
+    font-size: 1.6em;
+    /* Tăng kích thước font */
+    margin-bottom: 50px;
+    color: #ecf0f1;
+    font-weight: 300;
+    animation: fadeInUp 1.2s ease-out 0.6s forwards;
+    /* Hiệu ứng hiện dần từ dưới lên, delay 0.6s */
+    opacity: 0;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 20px;
+    /* Tăng khoảng cách giữa các icon */
+    font-size: 1.5em;
+    /* Tăng kích thước icon */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #f39c12;
+    /* Màu vàng cam nổi bật khi hover */
+    transform: translateY(-8px) scale(1.15);
+    /* Hiệu ứng bay lên và phóng to rõ rệt */
+}
+
+.social-links i {
+    margin-right: 10px;
+}
+
+/* Card Styling for Sections */
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    /* Bo góc mềm mại hơn */
+    /* Đổ bóng tinh tế, có chiều sâu */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    padding: 50px;
+    /* Tăng padding */
+    margin-bottom: 40px;
+    /* Tăng margin */
+    /* Viền trái màu xanh tươi sáng, rõ nét */
+    border-left: 8px solid #1abc9c;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    /* Nâng card lên rõ rệt khi hover */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng mạnh hơn khi hover */
+}
+
+.card h2 {
+    color: #2c3e50;
+    /* Viền dưới màu vàng cam mạnh mẽ */
+    border-bottom: 4px solid #f39c12;
+    padding-bottom: 18px;
+    margin-bottom: 35px;
+    font-size: 2.5em;
+    /* Tăng kích thước font */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Skill List */
+.skill-category h3 {
+    color: #3498db;
+    /* Màu xanh dương cho tiêu đề danh mục kỹ năng */
+    margin-top: 30px;
+    margin-bottom: 18px;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Tăng khoảng cách */
+}
+
+.skill-list li {
+    /* Gradient nền cho kỹ năng, tươi sáng hơn */
+    background: linear-gradient(90deg, #e0f7fa, #b3e5fc);
+    color: #007bff;
+    /* Màu chữ xanh đậm */
+    padding: 12px 22px;
+    border-radius: 30px;
+    /* Bo tròn hoàn toàn hơn */
+    font-size: 1.1em;
+    border: 1px solid #81d4fa;
+    transition: background 0.4s ease, transform 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng nhẹ */
+}
+
+.skill-list li:hover {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    /* Đổi gradient khi hover */
+    color: #ffffff;
+    transform: scale(1.08) translateX(5px);
+    /* Phóng to và dịch chuyển nhẹ khi hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Job/Education Entry */
+.job-entry,
+.education-entry {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed #cfd8dc;
+    /* Đường gạch dưới rõ hơn */
+}
+
+.job-entry:last-child,
+.education-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.job-entry h3,
+.education-entry h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.duration,
+.degree {
+    font-style: normal;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 1em;
+}
+
+.job-entry ul {
+    list-style: disc;
+    margin-left: 30px;
+    /* Tăng margin */
+    padding: 0;
+    color: #555;
+}
+
+.job-entry li {
+    margin-bottom: 8px;
+}
+
+/* Project Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Tăng min-width */
+    gap: 30px;
+    /* Tăng khoảng cách */
+}
+
+.project-card {
+    background-color: #fcfdfe;
+    border: 1px solid #dbe2e9;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    /* Nâng lên rõ rệt */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h4 {
+    margin-top: 0;
+    color: #34495e;
+    font-size: 1.5em;
+    /* Viền dưới màu vàng cam, dày hơn */
+    border-bottom: 3px solid #f39c12;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.project-card p {
+    font-size: 1.05em;
+    /* Tăng kích thước font */
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.project-card .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    /* Tăng khoảng cách */
+    margin-top: 20px;
+    color: #1abc9c;
+    /* Màu xanh ngọc tươi sáng */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05em;
+    /* Tăng kích thước font */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-card .project-link:hover {
+    color: #16a085;
+    text-decoration: underline;
+    transform: translateX(8px);
+    /* Dịch chuyển nhiều hơn */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 50px;
+    /* Tăng padding */
+    /* Gradient cho footer, đồng bộ với header */
+    background: linear-gradient(45deg, #2c3e50 0%, #34495e 100%);
+    color: #ecf0f1;
+    font-size: 1.1em;
+    /* Tăng kích thước font */
+    margin-top: 60px;
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+        /* Dịch chuyển từ vị trí cao hơn */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+        /* Dịch chuyển từ vị trí thấp hơn */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+
+    /* breakpoint mới cho tablet */
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 3.5em;
+    }
+
+    .tagline {
+        font-size: 1.4em;
+    }
+
+    .card {
+        padding: 40px;
+    }
+
+    .card h2 {
+        font-size: 2.2em;
+    }
+
+    .skill-list li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 15px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+        letter-spacing: 1px;
+    }
+
+    .tagline {
+        font-size: 1.3em;
+        margin-bottom: 40px;
+    }
+
+    .social-links a {
+        margin: 0 15px;
+        font-size: 1.3em;
+    }
+
+    .card {
+        padding: 30px;
+        border-left: 6px solid #1abc9c;
+        margin-bottom: 30px;
+    }
+
+    .card h2 {
+        font-size: 2em;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        border-bottom: 3px solid #f39c12;
+    }
+
+    .skill-category h3 {
+        font-size: 1.6em;
+    }
+
+    .skill-list {
+        gap: 10px;
+    }
+
+    .skill-list li {
+        padding: 10px 18px;
+        font-size: 0.95em;
+    }
+
+    .job-entry h3,
+    .education-entry h3 {
+        font-size: 1.6em;
+    }
+
+    .project-card h4 {
+        font-size: 1.3em;
+    }
+
+    .project-card p {
+        font-size: 0.95em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* Một cột trên màn hình nhỏ hơn */
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 10px 40px;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+        border: 6px solid #f39c12;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        letter-spacing: 0.5px;
+    }
+
+    .tagline {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        font-size: 1.1em;
+    }
+
+    .card {
+        padding: 20px;
+        border-left: 4px solid #1abc9c;
+        margin-bottom: 25px;
+    }
+
+    .card h2 {
+        font-size: 1.8em;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .skill-category h3 {
+        font-size: 1.4em;
+    }
+
+    .skill-list li {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+
+    .job-entry h3,
+    .education-entry h3 {
+        font-size: 1.4em;
+    }
+
+    .project-card h4 {
+        font-size: 1.2em;
+    }
+
+    .project-card p {
+        font-size: 0.9em;
+    }
+
+    .footer {
+        padding: 30px;
+        font-size: 0.9em;
+    }
+}
